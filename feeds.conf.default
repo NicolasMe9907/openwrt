@@ -1,4 +1,4 @@
-src-git packages https://git.openwrt.org/redfrog999/packages-official.git;openwrt-23.05
-src-git luci https://git.openwrt.org/redfrog999/luci-official.git;openwrt-23.05
+src-git packages https://github.com/redfrog999/packages-official.git;openwrt-23.05
+src-git luci https://github.com/redfrog999/luci-official.git;openwrt-23.05
 src-git routing https://git.openwrt.org/feed/routing.git;openwrt-23.05
 src-git telephony https://git.openwrt.org/feed/telephony.git;openwrt-23.05
