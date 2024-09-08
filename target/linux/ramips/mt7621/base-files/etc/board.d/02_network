@@ -182,6 +182,12 @@ ramips_setup_macs()
 	zbtlink,zbt-wg3526-32m)
 		label_mac=$(mtd_get_mac_binary factory 0x4)
 		;;
+	jdcloud,re-sp-01b)
+		local index="$(find_mtd_index "config")"
+		label_mac=$(macaddr_canonicalize $(dd if="/dev/mtd${index}" bs=12 skip=17449 iflag=skip_bytes count=1 2>/dev/null))
+		lan_mac=$label_mac
+		wan_mac=$label_mac
+		;;		
 	ampedwireless,ally-00x19k)
 		lan_mac=$(mtd_get_mac_ascii hwconfig HW.LAN.MAC.Address)
 		label_mac=$lan_mac
